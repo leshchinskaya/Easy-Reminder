@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		CD47BF411FCB6D1A00634B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */; };
-		CD47BF431FCB6D1A00634B15 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF421FCB6D1A00634B15 /* ViewController.swift */; };
 		CD47BF461FCB6D1A00634B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF441FCB6D1A00634B15 /* Main.storyboard */; };
 		CD47BF491FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF471FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld */; };
 		CD47BF4B1FCB6D1A00634B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */; };
 		CD47BF4E1FCB6D1A00634B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */; };
 		CD47BF591FCB6D1A00634B15 /* Easy_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */; };
+		CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +29,6 @@
 /* Begin PBXFileReference section */
 		CD47BF3D1FCB6D1A00634B15 /* Easy Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CD47BF421FCB6D1A00634B15 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CD47BF451FCB6D1A00634B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD47BF481FCB6D1A00634B15 /* Easy_Reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Easy_Reminder.xcdatamodel; sourceTree = "<group>"; };
 		CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,7 @@
 		CD47BF541FCB6D1A00634B15 /* Easy ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_ReminderTests.swift; sourceTree = "<group>"; };
 		CD47BF5A1FCB6D1A00634B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +79,8 @@
 		CD47BF3F1FCB6D1A00634B15 /* Easy Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
-				CD47BF421FCB6D1A00634B15 /* ViewController.swift */,
 				CD47BF441FCB6D1A00634B15 /* Main.storyboard */,
 				CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */,
 				CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */,
@@ -202,9 +202,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD47BF431FCB6D1A00634B15 /* ViewController.swift in Sources */,
 				CD47BF491FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld in Sources */,
 				CD47BF411FCB6D1A00634B15 /* AppDelegate.swift in Sources */,
+				CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
