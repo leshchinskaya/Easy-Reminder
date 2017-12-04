@@ -21,6 +21,7 @@ class Easy_ReminderTests: XCTestCase {
         super.tearDown()
     }
     
+    /*
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -31,6 +32,25 @@ class Easy_ReminderTests: XCTestCase {
         self.measure {
             // Put the code you want to measure the time of here.
         }
+    }
+     */
+    
+    func testAddReminder () {
+        var result = false
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testDeleteReminder () {
+        var result = false
+        
+        XCTAssertTrue(result)
+    }
+    
+    func testCreateReminder () {
+        var result = false
+        
+        XCTAssertTrue(result)
     }
     
 }
