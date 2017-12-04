@@ -14,6 +14,9 @@
 		CD47BF4E1FCB6D1A00634B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */; };
 		CD47BF591FCB6D1A00634B15 /* Easy_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */; };
 		CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */; };
+		CDCE27481FD51498002F29E8 /* ReminderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27471FD51498002F29E8 /* ReminderItem.swift */; };
+		CDCE274A1FD514FA002F29E8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27491FD514FA002F29E8 /* Location.swift */; };
+		CDCE274C1FD51525002F29E8 /* ItemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE274B1FD51525002F29E8 /* ItemManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,9 @@
 		CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_ReminderTests.swift; sourceTree = "<group>"; };
 		CD47BF5A1FCB6D1A00634B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTableViewController.swift; sourceTree = "<group>"; };
+		CDCE27471FD51498002F29E8 /* ReminderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItem.swift; sourceTree = "<group>"; };
+		CDCE27491FD514FA002F29E8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		CDCE274B1FD51525002F29E8 /* ItemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +85,7 @@
 		CD47BF3F1FCB6D1A00634B15 /* Easy Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				CDCE274D1FD5155A002F29E8 /* Model */,
 				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
 				CD47BF441FCB6D1A00634B15 /* Main.storyboard */,
@@ -97,6 +104,16 @@
 				CD47BF5A1FCB6D1A00634B15 /* Info.plist */,
 			);
 			path = "Easy ReminderTests";
+			sourceTree = "<group>";
+		};
+		CDCE274D1FD5155A002F29E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDCE27471FD51498002F29E8 /* ReminderItem.swift */,
+				CDCE27491FD514FA002F29E8 /* Location.swift */,
+				CDCE274B1FD51525002F29E8 /* ItemManager.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +221,9 @@
 			files = (
 				CD47BF491FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld in Sources */,
 				CD47BF411FCB6D1A00634B15 /* AppDelegate.swift in Sources */,
+				CDCE274A1FD514FA002F29E8 /* Location.swift in Sources */,
+				CDCE27481FD51498002F29E8 /* ReminderItem.swift in Sources */,
+				CDCE274C1FD51525002F29E8 /* ItemManager.swift in Sources */,
 				CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
