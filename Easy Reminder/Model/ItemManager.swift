@@ -6,4 +6,8 @@
 //  Copyright © 2017 Mariya. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class ItemManager: NSObject {
+    
+}

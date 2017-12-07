@@ -85,6 +85,7 @@
 		CD47BF3F1FCB6D1A00634B15 /* Easy Reminder */ = {
 			isa = PBXGroup;
 			children = (
+				CDCE27621FD9C478002F29E8 /* Controller */,
 				CDCE274D1FD5155A002F29E8 /* Model */,
 				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
@@ -114,6 +115,13 @@
 				CDCE274B1FD51525002F29E8 /* ItemManager.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CDCE27621FD9C478002F29E8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
