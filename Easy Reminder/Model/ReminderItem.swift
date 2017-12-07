@@ -9,6 +9,23 @@
 import Foundation
 
 struct ReminderItem: Equatable {
+    static func ==(lhs: ReminderItem, rhs: ReminderItem) -> Bool {
+        if lhs.location != rhs.location {
+            return false
+        }
+        if lhs.timestamp != rhs.timestamp {
+            return false
+        }
+        if lhs.itemDescription != rhs.itemDescription {
+            return false
+        }
+        if lhs.title != rhs.title {
+            return false
+        }
+        
+        return true
+    }
+    
     let title: String
     let itemDescription: String?
     let timestamp: Double?
@@ -20,18 +37,18 @@ struct ReminderItem: Equatable {
     
     var plistDict: NSDictionary {
         var dict = [String:AnyObject]()
-        dict[titleKey] = title
+        dict[titleKey] = title as AnyObject
         if let itemDescription = itemDescription {
-            dict[itemDescriptionKey] = itemDescription
+            dict[itemDescriptionKey] = itemDescription as AnyObject
         }
         if let timestamp = timestamp {
-            dict[timestampKey] = timestamp
+            dict[timestampKey] = timestamp as AnyObject
         }
         if let location = location {
             let locationDict = location.plistDict
             dict[locationKey] = locationDict
         }
-        return dict
+        return dict as NSDictionary
     }
     
     init(title: String, itemDescription: String? = nil, timestamp: Double? = nil, location: Location? = nil) {
@@ -54,22 +71,4 @@ struct ReminderItem: Equatable {
         }
     }
     
-}
-
-
-func ==(lhs: ToDoItem, rhs: ToDoItem) -> Bool {
-    if lhs.location != rhs.location {
-        return false
-    }
-    if lhs.timestamp != rhs.timestamp {
-        return false
-    }
-    if lhs.itemDescription != rhs.itemDescription {
-        return false
-    }
-    if lhs.title != rhs.title {
-        return false
-    }
-    
-    return true
 }

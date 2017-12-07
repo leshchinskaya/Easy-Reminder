@@ -95,7 +95,6 @@
 			children = (
 				CDCE27621FD9C478002F29E8 /* Controller */,
 				CDCE274D1FD5155A002F29E8 /* Model */,
-				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
 				CD47BF441FCB6D1A00634B15 /* Main.storyboard */,
 				CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */,
@@ -110,8 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */,
-				CD47BF5A1FCB6D1A00634B15 /* Info.plist */,
 				CDCE27651FD9CA0F002F29E8 /* InputViewControllerTests.swift */,
+				CD47BF5A1FCB6D1A00634B15 /* Info.plist */,
 			);
 			path = "Easy ReminderTests";
 			sourceTree = "<group>";
@@ -129,6 +128,7 @@
 		CDCE27621FD9C478002F29E8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CDCE27631FD9C56D002F29E8 /* InputViewController.swift */,
 			);
 			path = Controller;
