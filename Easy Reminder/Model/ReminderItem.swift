@@ -9,22 +9,6 @@
 import Foundation
 
 struct ReminderItem: Equatable {
-    static func ==(lhs: ReminderItem, rhs: ReminderItem) -> Bool {
-        if lhs.location != rhs.location {
-            return false
-        }
-        if lhs.timestamp != rhs.timestamp {
-            return false
-        }
-        if lhs.itemDescription != rhs.itemDescription {
-            return false
-        }
-        if lhs.title != rhs.title {
-            return false
-        }
-        
-        return true
-    }
     
     let title: String
     let itemDescription: String?
@@ -71,4 +55,23 @@ struct ReminderItem: Equatable {
         }
     }
     
+}
+
+extension ReminderItem {
+    static func ==(lhs: ReminderItem, rhs: ReminderItem) -> Bool {
+        if lhs.location != rhs.location {
+            return false
+        }
+        if lhs.timestamp != rhs.timestamp {
+            return false
+        }
+        if lhs.itemDescription != rhs.itemDescription {
+            return false
+        }
+        if lhs.title != rhs.title {
+            return false
+        }
+        
+        return true
+    }
 }

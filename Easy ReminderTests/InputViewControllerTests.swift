@@ -11,9 +11,10 @@ import CoreLocation
 @testable import Easy_Reminder
 
 class InputViewControllerTests: XCTestCase {
-    /*
+/*
     var sut: InputViewController!
     var placemark: MockPlacemark!
+    
     override func setUp() {
         super.setUp()
         
@@ -151,6 +152,6 @@ extension InputViewControllerTests {
             dismissGotCalled = true
             completionHandler?()
         } }
- */
+*/
 }
 
