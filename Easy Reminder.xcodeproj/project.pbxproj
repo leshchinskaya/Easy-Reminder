@@ -13,6 +13,7 @@
 		CD47BF4B1FCB6D1A00634B15 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */; };
 		CD47BF4E1FCB6D1A00634B15 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */; };
 		CD47BF591FCB6D1A00634B15 /* Easy_ReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */; };
+		CD86787B1FE2A2B1001EAA6F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86787A1FE2A2B1001EAA6F /* DetailViewController.swift */; };
 		CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */; };
 		CDCE27481FD51498002F29E8 /* ReminderItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27471FD51498002F29E8 /* ReminderItem.swift */; };
 		CDCE274A1FD514FA002F29E8 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27491FD514FA002F29E8 /* Location.swift */; };
@@ -43,6 +44,7 @@
 		CD47BF541FCB6D1A00634B15 /* Easy ReminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Easy ReminderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Easy_ReminderTests.swift; sourceTree = "<group>"; };
 		CD47BF5A1FCB6D1A00634B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD86787A1FE2A2B1001EAA6F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTableViewController.swift; sourceTree = "<group>"; };
 		CDCE27471FD51498002F29E8 /* ReminderItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderItem.swift; sourceTree = "<group>"; };
 		CDCE27491FD514FA002F29E8 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 			children = (
 				CDCE27451FD505D1002F29E8 /* ERTableViewController.swift */,
 				CDCE27631FD9C56D002F29E8 /* InputViewController.swift */,
+				CD86787A1FE2A2B1001EAA6F /* DetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 				CDCE27481FD51498002F29E8 /* ReminderItem.swift in Sources */,
 				CDCE274C1FD51525002F29E8 /* ItemManager.swift in Sources */,
 				CDCE27461FD505D1002F29E8 /* ERTableViewController.swift in Sources */,
+				CD86787B1FE2A2B1001EAA6F /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

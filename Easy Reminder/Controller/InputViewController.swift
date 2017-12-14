@@ -14,6 +14,7 @@ class InputViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
+
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
     
@@ -25,6 +26,7 @@ class InputViewController: UIViewController {
         dateFormatter.dateFormat = "MM/dd/yyyy"
         return dateFormatter
     }()
+    
     
     @IBAction func save() {
         guard let titleString = titleTextField.text, titleString.characters.count > 0 else { return }

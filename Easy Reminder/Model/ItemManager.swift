@@ -54,7 +54,7 @@ class ItemManager: NSObject {
             nsToDoItems.append(item.plistDict)
         }
         
-        // save done
+        //save done
         var nsDoneItems = [AnyObject]()
         for item in doneItems {
             nsDoneItems.append(item.plistDict)

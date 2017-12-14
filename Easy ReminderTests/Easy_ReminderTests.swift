@@ -35,6 +35,7 @@ class Easy_ReminderTests: XCTestCase {
     }
      */
     
+    /*
     func testAddReminder () {
         var result = false
         
@@ -52,5 +53,6 @@ class Easy_ReminderTests: XCTestCase {
         
         XCTAssertTrue(result)
     }
+     */
     
 }
