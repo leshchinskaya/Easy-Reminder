@@ -97,12 +97,8 @@
 			children = (
 				CDCE27621FD9C478002F29E8 /* Controller */,
 				CDCE274D1FD5155A002F29E8 /* Model */,
-				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
 				CD47BF441FCB6D1A00634B15 /* Main.storyboard */,
-				CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */,
-				CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */,
-				CD47BF4F1FCB6D1A00634B15 /* Info.plist */,
-				CD47BF471FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld */,
+				CD86787C1FE3B6CB001EAA6F /* Supporting Files */,
 			);
 			path = "Easy Reminder";
 			sourceTree = "<group>";
@@ -115,6 +111,18 @@
 				CD47BF5A1FCB6D1A00634B15 /* Info.plist */,
 			);
 			path = "Easy ReminderTests";
+			sourceTree = "<group>";
+		};
+		CD86787C1FE3B6CB001EAA6F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */,
+				CD47BF4A1FCB6D1A00634B15 /* Assets.xcassets */,
+				CD47BF4C1FCB6D1A00634B15 /* LaunchScreen.storyboard */,
+				CD47BF4F1FCB6D1A00634B15 /* Info.plist */,
+				CD47BF471FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		CDCE274D1FD5155A002F29E8 /* Model */ = {
