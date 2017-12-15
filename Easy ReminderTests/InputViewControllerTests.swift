@@ -57,7 +57,7 @@ class InputViewControllerTests: XCTestCase {
         mockInputViewController.itemManager = ItemManager()
         //let expectation = expectation(description: "bla")
         mockInputViewController.completionHandler = {
-        //    expectation.fulfill()
+            //expectation.fulfill()
         }
         mockInputViewController.save()
         
@@ -78,7 +78,6 @@ class InputViewControllerTests: XCTestCase {
         XCTAssertEqual(item, testItem)
     }
     
-    /*
     func test_SaveButtonHasSaveAction() {
         let saveButton: UIButton = sut.saveButton
         guard let actions = saveButton.actions(forTarget: sut, forControlEvent: .touchUpInside)
@@ -87,7 +86,6 @@ class InputViewControllerTests: XCTestCase {
                 return }
         XCTAssertTrue(actions.contains("save"))
     }
-     */
     
     func test_GeocoderWorksAsExpected() {
         //let expectation = expectation(description: "Wait for geocode")

@@ -14,9 +14,10 @@ class InputViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var dateTextField: UITextField!
-
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var descriptionTextField: UITextField!
+    
+    @IBOutlet weak var saveButton: UIButton!
     
     lazy var geocoder = CLGeocoder()
     var itemManager: ItemManager?
@@ -29,6 +30,7 @@ class InputViewController: UIViewController {
     
     
     @IBAction func save() {
+        print ("Save")
         guard let titleString = titleTextField.text, titleString.characters.count > 0 else { return }
         let date: NSDate?
         if let dateText = self.dateTextField.text, dateText.characters.count > 0 {

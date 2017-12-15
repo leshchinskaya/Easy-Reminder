@@ -113,6 +113,9 @@
                                 <rect key="frame" x="16" y="340" width="318" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save" destination="jr2-ja-Tn6" eventType="touchUpInside" id="uD4-ff-ddv"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -123,6 +126,7 @@
                         <outlet property="dateTextField" destination="tz4-ea-fX3" id="qWs-S6-9U5"/>
                         <outlet property="descriptionTextField" destination="eng-Nj-H7z" id="dBp-sB-Yal"/>
                         <outlet property="locationTextField" destination="Wdg-ar-ZhR" id="GeU-0z-51k"/>
+                        <outlet property="saveButton" destination="YyW-nS-Nia" id="kad-zr-8se"/>
                         <outlet property="titleTextField" destination="tw7-lT-YCQ" id="6De-ir-KlZ"/>
                     </connections>
                 </viewController>
