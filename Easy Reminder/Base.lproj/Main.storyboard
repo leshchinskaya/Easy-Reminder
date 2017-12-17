@@ -41,6 +41,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="nYz-2s-oCW" kind="show" identifier="detailSegue" id="6DU-p3-RBX"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -56,7 +59,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="ADD"/>
                                 <connections>
-                                    <segue destination="jr2-ja-Tn6" kind="show" id="8H9-Z4-sVR"/>
+                                    <segue destination="jr2-ja-Tn6" kind="show" identifier="addSegue" id="8H9-Z4-sVR"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -133,6 +136,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V1X-IS-kwG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="501.60000000000002" y="379.16041979010498"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="MNY-hX-cVr">
+            <objects>
+                <viewController id="nYz-2s-oCW" customClass="DetailViewController" customModule="Easy_Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="N0F-ge-aQT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="xeE-YG-L7X"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gpF-UA-1ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-516" y="1099"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Mqb-hj-z4x">
