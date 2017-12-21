@@ -38,7 +38,7 @@ class DetailViewControllerTests: XCTestCase {
         XCTAssertNotNil(sut.dateTextField)
     }
     
-    func test_SaveReminder() {
+    func test_SaveGenerReminder() {
         let mockDetailViewController = MockDetailViewController()
         
         mockDetailViewController.titleTextField = UITextField()
