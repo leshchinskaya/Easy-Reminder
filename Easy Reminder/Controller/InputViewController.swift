@@ -38,9 +38,9 @@ class InputViewController: UIViewController {
     @IBAction func save() {
         print ("Save")
         guard let titleString = titleTextField.text, titleString.characters.count > 0 else { return }
-        let date: NSDate?
+        let date: Date?
         if let dateText = self.dateTextField.text, dateText.characters.count > 0 {
-            date = dateFormatter.date(from: dateText)! as NSDate
+            date = dateFormatter.date(from: dateText)!
         } else {
             date = nil
         }
@@ -57,7 +57,7 @@ class InputViewController: UIViewController {
                     let placeMark = placeMarks?.first
                     let item = ReminderItem(title: titleString,
                                         itemDescription: descriptionString,
-                                        timestamp: date?.timeIntervalSince1970,
+                                        timestamp: date,
                                         location: Location(name: locationName,
                                                        coordinate: placeMark?.location?.coordinate))
                     DispatchQueue.main.async {
@@ -70,14 +70,14 @@ class InputViewController: UIViewController {
                     
                 }
             } else {
-                let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: Location(name: locationName))
+                let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date, location: Location(name: locationName))
                 self.delegate?.inputViewController(self, didAddReminder: item)
                 self.navigationController?.popViewController(animated: true)
                 self.itemManager?.addItem(item: item)
                 dismiss(animated: true, completion: nil)
             }
         } else {
-            let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: nil)
+            let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date, location: nil)
             self.delegate?.inputViewController(self, didAddReminder: item)
             self.navigationController?.popViewController(animated: true)
             self.itemManager?.addItem(item: item)

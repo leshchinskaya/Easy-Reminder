@@ -38,12 +38,6 @@ class ERTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-//
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//
-//        tableView.reloadData()
-//    }
 
     // MARK: - Table view data source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -67,10 +61,7 @@ class ERTableViewController: UITableViewController {
         if editingStyle == .delete {
             // Delete the row from the data source
             
-            reminderTitles.remove(at: indexPath.row)
-            reminderDescs.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-            
+            reminders?.remove(at: indexPath.row)
         }
         
         /*
@@ -79,12 +70,26 @@ class ERTableViewController: UITableViewController {
         }
          */
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        performSegue(withIdentifier: "detailSegue", sender: indexPath)
+    }
 
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVC = segue.destination as? InputViewController, segue.identifier == "addSegue" {
+            destVC.delegate = self
+        }
+        
+         if let destVC = segue.destination as? DetailViewController, segue.identifier == "detailSegue" {
+            guard
+                let reminder = reminders?[(sender as! IndexPath).row],
+                let indexPath = sender as? IndexPath else { return }
+            destVC.reminder = reminder
+            destVC.indexPath = indexPath
             destVC.delegate = self
         }
     }
@@ -95,7 +100,12 @@ extension ERTableViewController: InputViewControllerDelegate {
     func inputViewController(_ inputViewController: InputViewController, didAddReminder reminder: ReminderItem) {
         print(reminder.title + " " + reminder.itemDescription!)
         reminders?.append(reminder)
-        print(reminders?.count)
+    }
+}
+
+extension ERTableViewController: DetailViewControllerDelegate {
+    func detailViewController(_ detailViewController: DetailViewController, didEditReminder reminder: ReminderItem, at indexPath: IndexPath) {
+        reminders![indexPath.row] = reminder
 //        tableView.reloadData()
     }
 }

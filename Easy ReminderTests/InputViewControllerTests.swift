@@ -13,7 +13,7 @@ import CoreLocation
 class InputViewControllerTests: XCTestCase {
 
     var sut: InputViewController!
-    var placemark: MockPlacemark!
+    //var placemark: MockPlacemark!
     
     override func setUp() {
         super.setUp()
@@ -126,7 +126,7 @@ class InputViewControllerTests: XCTestCase {
 }
 
 extension InputViewControllerTests {
-
+    /*
     class MockGeocoder: CLGeocoder {
         var completionHandler: CLGeocodeCompletionHandler?
         override func geocodeAddressString(_ addressString: String, completionHandler: @escaping CLGeocodeCompletionHandler) {
@@ -143,6 +143,7 @@ extension InputViewControllerTests {
                               longitude: coordinate.longitude)
         }
     }
+     */
     
     class MockInputViewController : InputViewController {
         var dismissGotCalled = false

@@ -10,10 +10,10 @@ import Foundation
 
 struct ReminderItem: Equatable {
     
-    let title: String
-    let itemDescription: String?
-    let timestamp: Double?
-    let location: Location?
+    var title: String
+    var itemDescription: String?
+    var timestamp: Date?
+    var location: Location?
     private let titleKey = "titleKey"
     private let itemDescriptionKey = "itemDescriptionKey"
     private let timestampKey = "timestampKey"
@@ -35,7 +35,7 @@ struct ReminderItem: Equatable {
         return dict as NSDictionary
     }
     
-    init(title: String, itemDescription: String? = nil, timestamp: Double? = nil, location: Location? = nil) {
+    init(title: String, itemDescription: String? = nil, timestamp: Date? = nil, location: Location? = nil) {
         self.title = title
         self.itemDescription = itemDescription
         self.timestamp = timestamp
@@ -47,7 +47,7 @@ struct ReminderItem: Equatable {
         { return nil }
         self.title = title
         self.itemDescription = dict[itemDescriptionKey] as? String
-        self.timestamp = dict[timestampKey] as? Double
+        self.timestamp = dict[timestampKey] as? Date
         if let locationDict = dict[locationKey] as? NSDictionary {
             self.location = Location(dict: locationDict)
         } else {

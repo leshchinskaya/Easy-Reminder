@@ -8,12 +8,45 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+protocol DetailViewControllerDelegate: class {
+    func detailViewController(_ detailViewController: DetailViewController, didEditReminder reminder: ReminderItem, at indexPath: IndexPath)
+}
 
+class DetailViewController: UIViewController {
+    
+    @IBOutlet weak var titleTextField: UITextField!
+    @IBOutlet weak var locationTextField: UITextField!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var addressTextField: UITextField!
+    @IBOutlet weak var descriptionTextField: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
+    var reminder: ReminderItem?
+    var indexPath: IndexPath?
+    
+    weak var delegate: DetailViewControllerDelegate?
+    
+    @IBAction func save(_ sender: Any) {
+        print("save detail")
+        reminder?.title = titleTextField.text!
+        reminder?.timestamp = dateTextField.text?.dateRepresentation
+        reminder?.itemDescription = descriptionTextField.text
+        guard let reminder = reminder, let indexPath = indexPath else {
+            return
+        }
+        delegate?.detailViewController(self, didEditReminder: reminder, at: indexPath)
+        dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        titleTextField.text = reminder?.title
+        locationTextField.text = reminder?.location?.name
+        dateTextField.text = reminder?.timestamp?.stringRepresentation
+        addressTextField.text = "Gavno"
+        descriptionTextField.text = reminder?.itemDescription
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,4 +64,20 @@ class DetailViewController: UIViewController {
     }
     */
 
+}
+
+extension Date {
+    var stringRepresentation: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.string(from: self)
+    }
+}
+
+extension String {
+    var dateRepresentation: Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.date(from: self)!
+    }
 }

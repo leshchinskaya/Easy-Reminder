@@ -12,7 +12,7 @@
         <!--Easy Reminder-->
         <scene sceneID="53f-j6-gy7">
             <objects>
-                <tableViewController title="Easy Reminder" id="V28-v4-68P" customClass="ERTableViewController" customModule="Easy_Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ERTableViewController" title="Easy Reminder" id="V28-v4-68P" customClass="ERTableViewController" customModule="Easy_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="xEm-v9-GqA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,9 +41,6 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="nYz-2s-oCW" kind="show" identifier="detailSegue" id="6DU-p3-RBX"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -64,6 +61,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="nYz-2s-oCW" kind="show" identifier="detailSegue" id="vsY-kh-4fN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fnB-pd-5fH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -140,13 +140,67 @@
         <!--Detail View Controller-->
         <scene sceneID="MNY-hX-cVr">
             <objects>
-                <viewController id="nYz-2s-oCW" customClass="DetailViewController" customModule="Easy_Reminder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="nYz-2s-oCW" customClass="DetailViewController" customModule="Easy_Reminder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N0F-ge-aQT">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AaG-1k-iAU">
+                                <rect key="frame" x="28" y="91" width="318" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e2p-bU-weR">
+                                <rect key="frame" x="28" y="139" width="318" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ALf-xK-KKw">
+                                <rect key="frame" x="28" y="187" width="318" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RkQ-j2-qOE">
+                                <rect key="frame" x="28" y="236" width="318" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OvG-cL-eKD">
+                                <rect key="frame" x="28" y="282" width="318" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYO-mz-43c">
+                                <rect key="frame" x="28" y="342" width="318" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="save" destination="jr2-ja-Tn6" eventType="touchUpInside" id="uKe-8D-SbJ"/>
+                                    <action selector="save:" destination="nYz-2s-oCW" eventType="touchUpInside" id="qnT-zp-sRb"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="xeE-YG-L7X"/>
                     </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="RkQ-j2-qOE" id="aAG-TG-Fk8"/>
+                        <outlet property="dateTextField" destination="ALf-xK-KKw" id="ix4-oP-caR"/>
+                        <outlet property="descriptionTextField" destination="OvG-cL-eKD" id="fuV-vf-ZpR"/>
+                        <outlet property="locationTextField" destination="e2p-bU-weR" id="pQV-il-AsG"/>
+                        <outlet property="saveButton" destination="zYO-mz-43c" id="11L-vn-kqT"/>
+                        <outlet property="titleTextField" destination="AaG-1k-iAU" id="dOs-eU-eyf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpF-UA-1ty" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

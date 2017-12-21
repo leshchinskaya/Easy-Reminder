@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD077FE91FEBAF05005A8471 /* ERTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD077FE81FEBAF05005A8471 /* ERTableViewControllerTests.swift */; };
 		CD47BF411FCB6D1A00634B15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */; };
 		CD47BF461FCB6D1A00634B15 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD47BF441FCB6D1A00634B15 /* Main.storyboard */; };
 		CD47BF491FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CD47BF471FCB6D1A00634B15 /* Easy_Reminder.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 		CDCE27641FD9C56D002F29E8 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27631FD9C56D002F29E8 /* InputViewController.swift */; };
 		CDCE27661FD9CA0F002F29E8 /* InputViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE27651FD9CA0F002F29E8 /* InputViewControllerTests.swift */; };
 		CDCE27691FD9CDF4002F29E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDCE27681FD9CDF4002F29E8 /* MapKit.framework */; };
+		CDDEEA1E1FEB9EC20093A7AB /* DetailViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDDEEA1D1FEB9EC20093A7AB /* DetailViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD077FE81FEBAF05005A8471 /* ERTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ERTableViewControllerTests.swift; sourceTree = "<group>"; };
 		CD47BF3D1FCB6D1A00634B15 /* Easy Reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Easy Reminder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD47BF401FCB6D1A00634B15 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD47BF451FCB6D1A00634B15 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,6 +55,7 @@
 		CDCE27631FD9C56D002F29E8 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		CDCE27651FD9CA0F002F29E8 /* InputViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewControllerTests.swift; sourceTree = "<group>"; };
 		CDCE27681FD9CDF4002F29E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CDDEEA1D1FEB9EC20093A7AB /* DetailViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +112,8 @@
 			children = (
 				CD47BF581FCB6D1A00634B15 /* Easy_ReminderTests.swift */,
 				CDCE27651FD9CA0F002F29E8 /* InputViewControllerTests.swift */,
+				CDDEEA1D1FEB9EC20093A7AB /* DetailViewControllerTests.swift */,
+				CD077FE81FEBAF05005A8471 /* ERTableViewControllerTests.swift */,
 				CD47BF5A1FCB6D1A00634B15 /* Info.plist */,
 			);
 			path = "Easy ReminderTests";
@@ -276,8 +282,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD077FE91FEBAF05005A8471 /* ERTableViewControllerTests.swift in Sources */,
 				CD47BF591FCB6D1A00634B15 /* Easy_ReminderTests.swift in Sources */,
 				CDCE27661FD9CA0F002F29E8 /* InputViewControllerTests.swift in Sources */,
+				CDDEEA1E1FEB9EC20093A7AB /* DetailViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
