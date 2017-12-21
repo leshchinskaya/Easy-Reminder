@@ -9,7 +9,6 @@
 import XCTest
 @testable import Easy_Reminder
 
-//удаление
 class ERTableViewControllerTests: XCTestCase {
     
     var sut: ERTableViewController!
@@ -24,17 +23,20 @@ class ERTableViewControllerTests: XCTestCase {
         
     }
     
-    func test_DeleteReminder() {
-        //let mockERTableViewController = MockERTableViewController()
     
-        var reminderTitles = ["Title1", "Title2"]
-        var reminderDescs = ["Description1", "Description2"]
+    func test_DeleteReminder() {
         
-        //mockERTableViewController.
+        var reminderTitle = ["Title1"]
+        var reminderDescription = ["Description1"]
+        var reminderLocation = ["Office"]
+        var reminderDate = ["10/10/2010"]
+        var reminderAddress = ["Infinite Loop 1, Cupertino"]
+        
+        reminderTitle.remove(at: 0)
+        reminderDescription.remove(at: 0)
+        reminderDate.remove(at: 0)
+        reminderAddress.remove(at: 0)
+        reminderLocation.remove(at: 0)
     
     }
 }
-
-
-//принятие данных из инпут
-//принятие данных из дитейл
