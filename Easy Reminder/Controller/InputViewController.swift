@@ -9,6 +9,10 @@
 import UIKit
 import CoreLocation
 
+protocol InputViewControllerDelegate: class  {
+    func inputViewController(_ inputViewController: InputViewController, didAddReminder reminder: ReminderItem)
+}
+
 class InputViewController: UIViewController {
 
     @IBOutlet weak var titleTextField: UITextField!
@@ -18,6 +22,8 @@ class InputViewController: UIViewController {
     @IBOutlet weak var descriptionTextField: UITextField!
     
     @IBOutlet weak var saveButton: UIButton!
+    
+    weak var delegate: InputViewControllerDelegate?
     
     lazy var geocoder = CLGeocoder()
     var itemManager: ItemManager?
@@ -56,6 +62,8 @@ class InputViewController: UIViewController {
                                                        coordinate: placeMark?.location?.coordinate))
                     DispatchQueue.main.async {
                         () -> Void in
+                        self.delegate?.inputViewController(self, didAddReminder: item)
+                        self.navigationController?.popViewController(animated: true)
                         self.itemManager?.addItem(item: item)
                         self.dismiss(animated: true, completion: nil)
                     }
@@ -63,11 +71,15 @@ class InputViewController: UIViewController {
                 }
             } else {
                 let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: Location(name: locationName))
+                self.delegate?.inputViewController(self, didAddReminder: item)
+                self.navigationController?.popViewController(animated: true)
                 self.itemManager?.addItem(item: item)
                 dismiss(animated: true, completion: nil)
             }
         } else {
             let item = ReminderItem(title: titleString, itemDescription: descriptionString, timestamp: date?.timeIntervalSince1970, location: nil)
+            self.delegate?.inputViewController(self, didAddReminder: item)
+            self.navigationController?.popViewController(animated: true)
             self.itemManager?.addItem(item: item)
             dismiss(animated: true, completion: nil)
         }
@@ -79,21 +91,5 @@ class InputViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
