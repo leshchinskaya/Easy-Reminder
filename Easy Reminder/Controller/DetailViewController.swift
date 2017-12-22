@@ -45,7 +45,7 @@ class DetailViewController: UIViewController {
         titleTextField.text = reminder?.title
         locationTextField.text = reminder?.location?.name
         dateTextField.text = reminder?.timestamp?.stringRepresentation
-        addressTextField.text = "Gavno"
+        addressTextField.text = "Chto-to"
         descriptionTextField.text = reminder?.itemDescription
     }
 

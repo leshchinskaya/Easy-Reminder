@@ -40,6 +40,12 @@ class InputViewControllerTests: XCTestCase {
     }
     
     func test_SaveNewReminder() {
+        var reminderTitle = [String]()
+        var reminderDescription = [String]()
+        var reminderLocation = [String]()
+        var reminderDate = [String]()
+        var reminderAddress = [String]()
+        
         let mockInputViewController = MockInputViewController()
         
         mockInputViewController.titleTextField = UITextField()
@@ -52,6 +58,13 @@ class InputViewControllerTests: XCTestCase {
         mockInputViewController.locationTextField.text = "Office"
         mockInputViewController.addressTextField.text = "Infinite Loop 1, Cupertino"
         mockInputViewController.descriptionTextField.text = "Test Description"
+        
+        reminderTitle.append(mockInputViewController.titleTextField.text!)
+        reminderDescription.append(mockInputViewController.descriptionTextField.text!)
+        reminderDate.append(mockInputViewController.dateTextField.text!)
+        reminderAddress.append(mockInputViewController.addressTextField.text!)
+        reminderLocation.append(mockInputViewController.locationTextField.text!)
+        
        // let mockGeocoder = MockGeocoder()
         //mockInputViewController.geocoder = mockGeocoder
         mockInputViewController.itemManager = ItemManager()
@@ -77,6 +90,12 @@ class InputViewControllerTests: XCTestCase {
                                 location: Location(name: "Office", coordinate: coordinate))
         XCTAssertEqual(item, testItem)
          */
+        
+        XCTAssertTrue(reminderTitle.count==1)
+        XCTAssertTrue(reminderDescription.count==1)
+        XCTAssertTrue(reminderDate.count==1)
+        XCTAssertTrue(reminderAddress.count==1)
+        XCTAssertTrue(reminderLocation.count==1)
     }
     
     func test_SaveButtonHasSaveAction() {

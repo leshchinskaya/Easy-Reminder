@@ -37,6 +37,14 @@ class ERTableViewControllerTests: XCTestCase {
         reminderDate.remove(at: 0)
         reminderAddress.remove(at: 0)
         reminderLocation.remove(at: 0)
+        
+        XCTAssertTrue(reminderTitle.count==0)
+        XCTAssertTrue(reminderDescription.count==0)
+        XCTAssertTrue(reminderDate.count==0)
+        XCTAssertTrue(reminderAddress.count==0)
+        XCTAssertTrue(reminderLocation.count==0)
     
     }
+    
+    
 }

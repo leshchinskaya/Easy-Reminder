@@ -12,7 +12,6 @@ import XCTest
 class DetailViewControllerTests: XCTestCase {
     
     var sut: DetailViewController!
-    //var placemark: MockPlacemark!
     
     override func setUp() {
         super.setUp()
@@ -39,6 +38,14 @@ class DetailViewControllerTests: XCTestCase {
     }
     
     func test_SaveGenerReminder() {
+        
+        var reminderTitle = [String]()
+        var reminderDescription = [String]()
+        var reminderLocation = [String]()
+        var reminderDate = [String]()
+        var reminderAddress = [String]()
+        var reminderTitleNew = ["New Title"]
+        
         let mockDetailViewController = MockDetailViewController()
         
         mockDetailViewController.titleTextField = UITextField()
@@ -51,7 +58,19 @@ class DetailViewControllerTests: XCTestCase {
         mockDetailViewController.locationTextField.text = "Office"
         mockDetailViewController.addressTextField.text = "Infinite Loop 1, Cupertino"
         mockDetailViewController.descriptionTextField.text = "Test Description"
+        
+        reminderTitle.append(mockDetailViewController.titleTextField.text!)
+        reminderDescription.append(mockDetailViewController.descriptionTextField.text!)
+        reminderDate.append(mockDetailViewController.dateTextField.text!)
+        reminderAddress.append(mockDetailViewController.addressTextField.text!)
+        reminderLocation.append(mockDetailViewController.locationTextField.text!)
+        
+        reminderTitle.remove(at: 0)
+        reminderTitle.append(reminderTitleNew[0])
+        
         mockDetailViewController.save(NSObject())
+        
+        XCTAssertTrue(reminderTitle[0]==reminderTitleNew[0])
     }
     
     func test_SaveButtonHasSaveAction() {
