@@ -39,12 +39,12 @@ class DetailViewControllerTests: XCTestCase {
     
     func test_SaveGenerReminder() {
         
-        var reminderTitle = ["Test Title"]
-        var reminderDescription = ["Test Description"]
-        var reminderLocation = ["Office"]
-        var reminderDate = ["02/22/2016"]
-        var reminderAddress = ["Infinite Loop 1, Cupertino"]
-        var reminderTitleNew = ["New Test Title"]
+        var reminderTitle = [String]()
+        var reminderDescription = [String]()
+        var reminderLocation = [String]()
+        var reminderDate = [String]()
+        var reminderAddress = [String]()
+        var reminderTitleNew = ["New Title"]
         
         let mockDetailViewController = MockDetailViewController()
         
@@ -53,15 +53,20 @@ class DetailViewControllerTests: XCTestCase {
         mockDetailViewController.locationTextField = UITextField()
         mockDetailViewController.addressTextField = UITextField()
         mockDetailViewController.descriptionTextField = UITextField()
-        mockDetailViewController.titleTextField.text = "New Test Title"
+        mockDetailViewController.titleTextField.text = "Test Title"
+        mockDetailViewController.dateTextField.text = "02/22/2016"
+        mockDetailViewController.locationTextField.text = "Office"
+        mockDetailViewController.addressTextField.text = "Infinite Loop 1, Cupertino"
+        mockDetailViewController.descriptionTextField.text = "Test Description"
+        
+        reminderTitle.append(mockDetailViewController.titleTextField.text!)
+        reminderDescription.append(mockDetailViewController.descriptionTextField.text!)
+        reminderDate.append(mockDetailViewController.dateTextField.text!)
+        reminderAddress.append(mockDetailViewController.addressTextField.text!)
+        reminderLocation.append(mockDetailViewController.locationTextField.text!)
         
         reminderTitle.remove(at: 0)
-        reminderTitle.append(mockDetailViewController.titleTextField.text!)
-        reminderDescription.append(reminderDescription[0])
-        reminderDate.append(reminderDate[0])
-        reminderAddress.append(reminderAddress[0])
-        reminderLocation.append(reminderLocation[0])
-        
+        reminderTitle.append(reminderTitleNew[0])
         
         mockDetailViewController.save(NSObject())
         
